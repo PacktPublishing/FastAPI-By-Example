@@ -1,2 +1,2 @@
-# Understanding-How-Web-APIs-Work
-Understanding How Web APIs Work, published by Packt
+# FastAPI By Example
+FastAPI By Example, published by Packt
