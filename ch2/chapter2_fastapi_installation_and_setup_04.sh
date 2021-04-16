@@ -1,1 +1,1 @@
-python -m pip install -U uvicorn[standard]
+python -m pip install -U uvicorn
