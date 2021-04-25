@@ -13,4 +13,4 @@ app = FastAPI()
 async def index(db:Session=Depends(get_db)):
     return f'Fake database connection: {db}'
 
-uvicorn.run(app, host='127.0.0.1', port=8080)
+uvicorn.run(app, host='127.0.0.1', port=8000)
