@@ -62,11 +62,11 @@ def update_flashcard(id:int, db:Session, flashcard:schemas.UpdateFlashcard):
     db_flashcard = db.query(models.Flashcard).filter(models.Flashcard.id==id).first()
     if not db_flashcard:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail='Flashcard not found!')
-    if not flashcard.category:
+    if flashcard.category:
         db_flashcard.category = flashcard.category
-    if not flashcard.question:
+    if flashcard.question:
         db_flashcard.question = flashcard.question
-    if not flashcard.answer:
+    if flashcard.answer:
         db_flashcard.answer = flashcard.answer
     db.commit()
     db.refresh(db_flashcard)
