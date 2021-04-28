@@ -23,7 +23,6 @@ class CreateFlashcard(BaseFlashcard):
 
 
 class UpdateFlashcard(BaseFlashcard):
-    #category: BaseCategory
     category_id: int
 
 
