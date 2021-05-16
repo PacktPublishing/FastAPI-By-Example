@@ -5,6 +5,7 @@ import graphql_schemas, crud, schemas, database
 class CreateCategory(graphene.Mutation):
     class Arguments:
         name = graphene.String()
+
     success = graphene.Boolean()
     category = graphene.Field(graphql_schemas.Category)
 
