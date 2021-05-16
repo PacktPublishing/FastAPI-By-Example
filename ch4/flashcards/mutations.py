@@ -71,14 +71,14 @@ class CreateFlashcard(graphene.Mutation):
 class UpdateFlashcard(graphene.Mutation):
     class Arguments:
         id = graphene.Int()
-        question = graphene.String()
-        answer = graphene.String()
-        category_id = graphene.Int()
+        question = graphene.String(required=False, default_value=None)
+        answer = graphene.String(required=False, default_value=None)
+        category_id = graphene.Int(required=False, default_value=None)
 
     success = graphene.Boolean()
     flashcard = graphene.Field(graphql_schemas.Flashcard)
 
-    async def mutate(root, info, id, question, answer, category_id):
+    async def mutate(root, info, id, question=None, answer=None, category_id=None):
         try:
             flashcard_schema = schemas.UpdateFlashcard(question=question, answer=answer, category_id=category_id)
             flashcard = crud.update_flashcard(db=database.SessionLocal(), id=id, flashcard=flashcard_schema)
