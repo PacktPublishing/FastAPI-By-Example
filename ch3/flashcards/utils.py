@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 from database import SessionLocal
+
 
 def get_db():
     db = SessionLocal()
@@ -6,4 +8,3 @@ def get_db():
         yield db
     finally:
         db.close()
-

@@ -1,9 +1,16 @@
+# -*- coding: utf-8 -*-
 import graphene
 from graphql import GraphQLError
-import graphql_schemas, crud, models, schemas, database
+import graphql_schemas
+import crud
+import models
+import schemas
+import database
+
 
 class Query(graphene.ObjectType):
-    get_flashcard = graphene.Field(graphql_schemas.Flashcard, id=graphene.Int())
+    get_flashcard = graphene.Field(
+        graphql_schemas.Flashcard, id=graphene.Int())
     get_flashcards = graphene.List(graphql_schemas.Flashcard)
     get_category = graphene.Field(graphql_schemas.Category, id=graphene.Int())
     get_categories = graphene.List(graphql_schemas.Category)

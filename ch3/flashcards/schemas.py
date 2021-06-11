@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from pydantic import BaseModel
 from typing import Optional, List
+
 
 class BaseCategory(BaseModel):
     name: str

@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from fastapi import FastAPI
 
-import models, database
+import models
+import database
 from routers import flashcards, categories
 
 models.Base.metadata.create_all(bind=database.engine)

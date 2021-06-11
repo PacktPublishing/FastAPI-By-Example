@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 from graphene_sqlalchemy import SQLAlchemyObjectType
 import models
+
 
 class Flashcard(SQLAlchemyObjectType):
     class Meta:
