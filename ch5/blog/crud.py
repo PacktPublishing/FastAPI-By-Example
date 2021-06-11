@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 from fastapi import status, HTTPException
 import models, schemas
-from utils import security #generate_hash, verify_password_hash
 
 def get_post(db:Session, id:int):
     db_post = db.query(models.Post).filter(models.Post.id==id).first()
