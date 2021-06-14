@@ -12,9 +12,21 @@ class BasePost(BaseModel):
         orm_mode = True
 
 
-class CreatePost(BasePost):
+class PostCreate(BasePost):
     pass
 
 
-class ShowPost(BasePost):
-    author: ShowUser
+class PostUpdate(BasePost):
+    pass
+
+
+class PostOut(BasePost):
+    class Config:
+        orm_mode = True
+
+
+class Post(BasePost):
+    id: int
+
+    class Config:
+        orm_mode = True

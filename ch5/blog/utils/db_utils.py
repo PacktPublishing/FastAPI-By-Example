@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from .. import database
+from database import SessionLocal
 
 
 async def get_db():
-    db_session = database.SessionLocal()
+    db_session = SessionLocal()
     try:
         yield db_session
     finally:

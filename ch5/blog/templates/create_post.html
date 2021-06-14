@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Create Post</h1>
+<form method="post">
+<p><input type="text" value=""  name="title" /></p>
+<textarea name="body" rows="4" cols="50"></textarea>
+<p>Please choose a published option</p>
+<input type="radio" id="yes" name="published" value="True">
+<label for="yes">Yes</label><br />
+<input type="radio" id="no" name="published" value="False">
+<label for="no">No</label><br />
+<input type="submit" value="create new post" />
+</form>
+{% endblock content %}

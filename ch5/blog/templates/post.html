@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{{ url_for('index') }}"><h3>< Return home</h3></a>
+<h1>{{post.title}}</h1>
+{{post.body}}<br />
+<b>Published at</b>: <i>{{post.created_at}}</i>
+{% endblock content %}
+
